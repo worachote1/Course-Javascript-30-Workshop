@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap'); /* ฟ้อนที่เลือก*/
+
+
+
+*{
+  /*  box-sizing: border-box; */
+    font-family: 'Kanit', sans-serif;
+    
+
+}
+
+body{
+    background-color: whitesmoke;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+}
+
+.container{
+    background-color: rgb(251, 255, 253);
+    border-radius: 5px;
+    box-shadow: 0px 2px 10px  rgba(50,50,50,.4);
+    width: 400px;
+    
+}
+
+.form{
+    padding: 20px 40px;
+}
+
+h2{
+    text-align: center;
+}
+
+.form-control{
+    position: relative; 
+    margin-bottom: 10px;
+    padding-bottom: 20px; 
+}
+
+.form-control label{
+    color: grey;
+    display: block; 
+    margin-bottom: 4px;
+}
+
+.form-control input{
+    border: solid whitesmoke 2px;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    margin: 4px;
+    font-size: 14px;
+    padding: 7px;
+}
+
+.form-control input:focus{
+    outline: 0;
+}
+
+.form-control.error input{
+    border-color: red;
+}
+
+.form-control.success input{
+    border-color: green;
+}
+
+.form-control small{
+    color: red;
+    position: absolute; 
+    bottom: 0px;
+    left: 0px;
+    visibility: hidden;  /*ซ่อนข้อความ error message เอาไว้ก่อน เราอยากจะให้มันปราากฏเมื่อ กดปุ่มส่งแล้ว */
+
+}
+
+.form-control.error small{
+    visibility: visible;
+    
+}
+
+.form button{
+    cursor: pointer;
+    background-color: rgb(51, 105, 253);
+    color: white;
+    width: 100%;
+    margin-top: 4px;
+    font-size: 17px;
+    padding: 10px;
+}

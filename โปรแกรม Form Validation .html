@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> โปรแกรม Form Validation </title>
+
+    <link rel="stylesheet" href="โปรแกรม Form Validation .css">
+</head>
+<body>
+    
+
+    
+    
+
+    <div class="container">
+
+        <form id="form" class="form">
+            <h2>แบบฟอร์มลงทะเบียน</h2>
+
+            <div class="form-control">
+                <label for="username">ชื่อผู้ใช้</label>
+                <input type="text" id="username" placeholder="Enter Your Username"> </input>
+                <small> error message</small>
+
+            </div>
+
+            <div class="form-control ">
+                <label for="email">อีเมล</label>
+                <input type="text" id="email" placeholder="Enter Your Email"> </input> <!-- ระะบุ type เป็น text ไปเลย เราะ เราค่อยใช้ javascript ตรวจข้อมูลเอา-->
+                <small> error message</small>
+
+            </div>
+
+            <div class="form-control ">
+                <label for="password">รหัสผ่าน</label>
+                <input type="password" id="password1" placeholder="Enter Your Password"> </input>
+                <small> error message</small>
+
+            </div>
+
+            <div class="form-control">
+                <label for="password">ยืนยันรหัสผ่าน</label>
+                <input type="password" id="password2" placeholder="Enter Your Re-password"> </input>
+                <small> error message</small>
+
+            </div>
+
+            <button type="submit">ลงทะเบียน</button>
+        </form>
+
+        
+    </div>
+    <script src="โปรแกรม Form Validation .js"></script>
+</body>
+</html>
