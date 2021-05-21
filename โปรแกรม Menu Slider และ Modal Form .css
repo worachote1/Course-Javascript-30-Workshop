@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+:root{ /* สร้างตัวแปรเอาไว้เรียกใช้ สีเดิมหลายๆรอบ*/
+    --primary-color :#303366;
+    --secondary-color : red;
+    --modal-delay: 1.4s ;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+
+body{
+    margin: 0;
+}
+
+/* ส่วนนี้จัดการ CSS ของ แถบ Menu Slider ด้านข้าง*/
+nav{
+    background-color: var(--primary-color);
+    border-right: solid black 2px;
+    color: white;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 200px;
+    height: 100vh;
+    z-index: 100; 
+    transform: translateX(-100%);   /* ซ่อนการแสดงผล ทุกส่วน100%ของเมนูด้านข้าง*/
+}
+
+nav .logo{
+    padding: 30px 0 ;
+    text-align: center; 
+}
+
+nav .logo img{
+    width: 140px;
+    height: 140px;
+    border-radius: 14%;
+}
+
+nav ul{
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+
+}
+
+nav ul li{
+    border-bottom: 2px solid black;
+    padding: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    text-decoration: underline ;
+}
+
+/*----------------------------------------------------------------------------------*/
+
+/* ส่วนนี้ตกแต่ง CSS ของ Header*/
+
+header{
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 140%;
+    position: relative; 
+    text-align: center; 
+    padding: 40px ;
+}
+
+header h1{
+    margin: 0px;
+}
+
+header p{
+    margin: 30px;
+}
+
+button, input[type = "submit"]{
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    color: white;
+    padding: 14px 24px;
+    cursor: pointer;
+}
+
+.toggle{
+    background: rgb(129, 125, 125);
+    position: absolute; 
+    
+    top: 10px;
+    left: 10px;
+}
+
+.create-account{
+    padding: 10px 34px;
+}
+
+.container{
+    margin: 0 auto; 
+    padding: 10px;
+    max-width: 100%;  
+    width: 800px; 
+}
+
+body.show-nav{
+    transform: translateX(200px); /* เปลี่ยนตําแหน่งในแกน x 200px ซึ่งที่ต้องเป็น 200px เพราะมันเป็นขนาดของ nav ที่เรา set ไว้แล้วในบรรทัดที่ 23*/
+    
+    /* silde หน้า Menu ออกมาภายใน 0.25วินาที*/
+    transition: 0.25s; 
+    transition-timing-function: linear;
+}
+
+/*----------------------------------------------------------------------------*/
+/* ส่วนนี้ตกแต่ง CSS ของ Modal Form*/
+
+.modal-container{
+    display: none;   /* ปิดการแสดงผล Form เอาไว้ไม่ต้องแสดงในตอนเริ่มต้น เราอยากจะให้มันแสดงผลเมื่อกดปุ่มสร้างบํญชีผู้ใช้*/
+    background-color: rgba(209, 240, 230, 0.479);
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom:0; 
+   
+
+}
+
+.modal{
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px rgb(58, 57, 57);
+    position: relative;
+    overflow: hidden; 
+    top: 20%;
+    left: 40%;
+    
+    transform: translateX(-50%,-50%); 
+    width: 400px;
+    max-width: 100%;
+
+  
+}
+
+
+
+.modal-container.show-modal{ /* เด้งหน้ากรอกรแบบฟอร์มขึ้นมา เมื่อกดปุ่ม สร้างบัญชีผู้ใช้*/
+    display: block;
+}
+
+.modal-header{
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.modal-content{
+    padding: 15px;
+}
+
+.modal-form div{
+    margin: 10px 0;
+
+}
+
+.modal-form label{
+    display: block;
+    margin-bottom: 10px;
+}
+
+.modal-form .form-input{
+    width: 100%;
+    padding: 4px;
+}
+
+.close-btn{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: transparent; /* สีพื้นหลังจะโปร่ง*/
+    font-size: 24px;
+}
+
+
+/*------------------------------------------------------------------------------------------------------------*/
+/* แสดง animaton ขึ้นมาเมื่อกดปุ่ม สรา้งบัญชีผู้ใช้*/
+.modal{
+    animation: modalOpen;
+    animation-duration: var(--modal-delay);
+}
+
+@keyframes modalOpen{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

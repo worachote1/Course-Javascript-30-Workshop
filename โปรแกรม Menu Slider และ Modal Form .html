@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>โปรแกรม Menu Slider และ Modaal Form    </title>
+
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+
+
+    <link rel="stylesheet" href="โปรแกรม Menu Slider และ Modal Form .css">
+</head>
+
+<body>
+    
+    <nav> 
+        <div class="logo"> 
+            <img src="logo.jpg">
+        </div>    
+
+        <ul>
+            <li> <a href="#">หน้าแรก  </a></li>
+            <li> <a href="#">เกี่ยวกับ  </a></li>
+            <li> <a href="#">ติดต่อเรา  </a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <button id="toggle" class="toggle">
+            <i class="fas fa-align-justify"></i>
+        </button>
+        
+        <h1>เว็บไซต์ clone Bankok Bank.com</h1>
+        <p> เรียนรู้การลงทุน และ การสร้างเว็บไซต์</p>
+        
+        <button class="create-account" id="open"> สร้างบัญชีผู้ใช้</button>
+    </header>
+
+    <div class="container">
+        <h2>Web Development</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero, consequuntur? Aliquam est ex nulla cum veniam laborum numquam quia praesentium et odit, a vitae tempore animi minima repudiandae ducimus dolorum!</p>
+        <h2> Game Development</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam ut explicabo repudiandae aperiam dolorem neque amet consequuntur. Nemo ipsum praesentium aspernatur accusantium, rerum fugit placeat molestias, quia magnam, quidem nobis.</p>
+    </div>
+
+    <div class="modal-container" id="modal">
+        <div class="modal"> <!-- ส่วนนี้จะประกอบด้วยแบบ Form ต่างๆ รวมถึงปุ่มปิด Modal ด้วย-->
+         
+            <button class="close-btn" id="close"> <!--ปุ่มกากบาท เพื่อปิดแบบ Form-->
+                <i class="fa fa-times"></i>
+            </button>
+
+            <div class="modal-header" >
+                <h3>สร้างบัญชีผู้ใช้</h3>
+            </div>
+
+            <div class="modal-content">
+                <p>แบบฟอร์มสร้างบัญชี</p>
+                <form class="modal-form">
+                
+                    <div>
+                        <label for="">ชื่อผู้ใช้ :</label>
+                        <input type="text" class="form-input"> 
+                    </div>    
+                
+                    <div>
+                        <label for="">อีเมล :</label>
+                        <input type="email" class="form-input"> 
+                    </div>    
+                
+                    <div>
+                        <label for="">รหัสผ่าน :</label>
+                        <input type="password" class="form-input"> 
+                    </div>    
+                
+                    <input type="submit" value="บันทึก" class="submit">
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="โปรแกรม Menu Slider และ Modal Form .js"></script>
+</body>
+</html>
