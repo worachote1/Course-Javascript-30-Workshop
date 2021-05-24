@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>โปรแกรมจองที่นั่งโรงภาพยนตร์</title>
+
+    <link rel="stylesheet" href="โปรแกรมจองที่นั่งโรงภาพยนต์.css">
+</head>
+
+<body>
+  
+    <!-- มีทั้งหมด 48 ที่นั้ง แบ่งเป็น 6 แถว 8 ที่นั่ง -->
+    <div class="movie-container">
+        <!-- ส่วนนี้บรรจุชื่อภาพยนต์ พร้อมกับทําการแสดงผลจอภาพยนต์ตรงหน้าที่นั่ง จะมีทางเดินแยกด้วย -->
+        <label for="">เลือกภาพยนตร์ :</label>
+        <select name="" id="movie">
+            <option value="150"> The Conjuring: The Devil Made Me Do It - คนเรียกผี 3 มัจจุราชบงการ  | 150 bath</option>
+            <option value="180"> Judas and the Black Messiah - จูดาส แอนด์ เดอะ แบล็ก เมสไซอาห์ |180 bath</option>
+            <option value="220" > Nobody - คนธรรมดานรกเรียกพี่ | 220 bath</option>
+            <option value="269"> Mortal Kombat - มอร์ทัล คอมแบท | 269 bath</option>
+
+        </select>
+
+        <!-- ส่วนของ showcase จะแสดงว่าในโรงหนัง มีที่นั่งส่วนใดว่างบ้าง  ที่นั่งใดถูกจองไไปแล้ว  -->
+        <ul class="showcase">
+            <li>
+                <div class="seat"></div>
+                <smal>ว่าง</smal>
+            </li>
+
+            <li>
+                <div class="seat selected"></div>
+                <smal>ที่นั่งของเรา</smal>
+            </li>
+            
+            <li>
+                <div class="seat occupied"></div>
+                <smal>ที่นั่งไม่ว่าง</smal>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="container">
+        <div class="screen"> </div>
+            <div class="row">
+                <div class="seat"> </div>
+                <div class="seat"> </div>
+                <div class="seat"> </div>
+                <div class="seat"> </div>
+                <div class="seat"> </div>
+                <div class="seat"> </div>
+                <div class="seat"> </div>
+                <div class="seat"> </div>
+            </div>
+            <div class="row">
+                <div class="seat"> </div>
+                <div class="seat "> </div>
+                <div class="seat occupied"> </div>
+                <div class="seat occupied"> </div>
+                <div class="seat"> </div>
+                <div class="seat"> </div>
+                <div class="seat"> </div>
+                <div class="seat"> </div>
+            </div>
+            <div class="row">
+                <div class="seat"> </div>
+                <div class="seat"> </div>
+                <div class="seat"> </div>
+                <div class="seat"> </div>
+                <div class="seat"> </div>
+                <div class="seat"> </div>
+                <div class="seat"> </div>
+                <div class="seat"> </div>
+            </div>
+            <div class="row">
+                <div class="seat"> </div>
+                <div class="seat"> </div>
+                <div class="seat"> </div>
+                <div class="seat"> </div>
+                <div class="seat"> </div>
+                <div class="seat"> </div>
+                <div class="seat"> </div>
+                <div class="seat"> </div>
+            </div>
+            <div class="row">
+                <div class="seat"> </div>
+                <div class="seat"> </div>
+                <div class="seat"> </div>
+                <div class="seat"> </div>
+                <div class="seat"> </div>
+                <div class="seat"> </div>
+                <div class="seat"> </div>
+                <div class="seat"> </div>
+            </div>
+            <div class="row">
+                <div class="seat"> </div>
+                <div class="seat"> </div>
+                <div class="seat"> </div>
+                <div class="seat"> </div>
+                <div class="seat"> </div>
+                <div class="seat"> </div>
+                <div class="seat"> </div>
+                <div class="seat"> </div>
+            </div>    
+        
+    </div>
+    <p class="text"> เลือกจํานวน 
+        <span id="count"> 0 </span> ที่นั่ง
+        ยอดชําระเงิน <span id="total"> 0 </span> บาท
+
+    </p>
+
+
+    <script src="โปรแกรมจองที่นั่งโรงภาพยนต์.js"></script>
+</body>
+</html>
